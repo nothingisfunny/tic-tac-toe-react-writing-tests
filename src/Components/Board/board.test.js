@@ -12,6 +12,6 @@ it('calls onClick event on click of a board square', () =>{
   const onClick = jest.fn();
   let wrapper = mount(<Board squares={squares} onClick={onClick}/>);
   wrapper.find('button.square').first().simulate('click');
-  expect(onClick).toBeCalled()
+  expect(onClick).toBeCalledWith(0)
 })
  
